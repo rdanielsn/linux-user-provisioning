@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source ./interactive_provision.sh
+source ./bulk_provision.sh
+
 echo "[USER PROVISIONING]"
 echo ""
 
@@ -11,14 +14,12 @@ while true; do
 
     case $METHOD in
     1)
-        echo ""
-        echo "You've choosen interactive user creation"
+        interactive
         break
         ;;
 
     2)
-        echo ""
-        echo "You've choosen bulk user creation from CSV file"
+        bulk
         break
         ;;
     *)
